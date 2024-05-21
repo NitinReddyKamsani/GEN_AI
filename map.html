@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NNRG College on Google Maps</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>NNRG College on Google Maps</h1>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            // Set the coordinates of NNRG College
+            var nnrgCollegeLocation = { lat: 17.4585, lng: 78.3739 };
+
+            // Create a new map instance
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: nnrgCollegeLocation
+            });
+
+            // Add a marker at NNRG College
+            var marker = new google.maps.Marker({
+                position: nnrgCollegeLocation,
+                map: map,
+                title: 'NNRG College'
+            });
+        }
+    </script>
+
+    <!-- Load the Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

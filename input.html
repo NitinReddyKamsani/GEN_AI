@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Creation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Creation</h1>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <fieldset>
+            <legend>Interests</legend>
+            <label>
+                <input type="checkbox" name="interests" value="reading">
+                Reading
+            </label>
+            <label>
+                <input type="checkbox" name="interests" value="sports">
+                Sports
+            </label>
+            <label>
+                <input type="checkbox" name="interests" value="music">
+                Music
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label>
+                <input type="radio" name="gender" value="male" required>
+                Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female" required>
+                Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other" required>
+                Other
+            </label>
+        </fieldset>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">Select a country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="australia">Australia</option>
+        </select>
+
+        <label for="skills">Skills:</label>
+        <select id="skills" name="skills" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
+
+        <button type="submit">Create User</button>
+    </form>
+</body>
+</html>
